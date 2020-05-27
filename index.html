@@ -2,36 +2,39 @@
   <html>
     <head>
       <link rel="stylesheet" href="./styles.css">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Intention Timer</title>
     </head>
     <body>
-      <h1>Intention Timer</h1>
-      <section>
-        <h1>New Activities</h1>
-        <article>
-          <button>
-          <button>
-          <button>
+      <h1 class="title">Intention Timer</h1>
+      <section class="new-activities">
+        <h1 class="left-title">New Activities</h1>
+        <div class="left-background">
+          <p class="select-title">Select a Category:</p>
+        <article class="btn-container">
+          <button class="study-btn">Study</button>
+          <button class="meditate-btn">Meditate</button>
+          <button class="exercise-btn">Exercise</button
         </article>
-        <form>
-          <div>
+        <form class="form-input">
+          <div class="top-input">
             <label>What would you like to accomplish during this time?</label>
             <input>
           </div>
-          <div>
+          <div class="left-input">
             <label>Minutes</label>
             <input>
           </div>
-          <div>
+          <div class="right-input">
             <label>Seconds</label>
             <input>
           </div>
-          <button>Start Activity</button>
+          <button class="start-btn">Start Activity</button>
         </form>
+        </div>
       </section>
-      <section>
-        <h1>Past Acitivties</h1>
+      <section class="past-activities">
+        <h1 class="right-title">Past Acitivties</h1>
         <p>You haven't logged any activities</p>
       </section>
     </body>
