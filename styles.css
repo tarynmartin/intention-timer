@@ -1,5 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  border: solid;
+  background-color: #2B2733
 }
 
 h1 {
@@ -8,4 +10,29 @@ h1 {
 
 p {
   font-weight: 300;
+}
+
+.title {
+  background-color: #46424D;
+  margin: 0;
+  text-align: center;
+  padding: 2.5%;
+}
+
+.activities {
+  display: flex;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 2fr 1fr;
+}
+
+.new-activity {
+  background-color: #46424D;
+  margin: 5%;
+}
+
+.past-activities {
+  border-left: solid;
+  border-color: #46424D;
+  padding: 5%;
 }
