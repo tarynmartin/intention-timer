@@ -30,6 +30,7 @@ button {
   background-color: #46424D;
   text-align: center;
   width: 100%;
+  margin: 0;
 }
 
 .activities {
@@ -112,6 +113,12 @@ input {
   color: #2B2733;
 }
 
+.btn-start {
+display: flex;
+justify-content: flex-end;
+padding: 10px 0;
+}
+
 @media screen and (max-width: 949px) {
   .icon,
   .btn-text {
@@ -127,9 +134,11 @@ input {
 
   .past-activities {
     border-top: solid;
+    border-left: none;
     border-color: #46424D;
     padding: 2%;
   }
+
   .start-btn,
   .btn-container {
     display: flex;
@@ -147,7 +156,13 @@ input {
   }
 
   .start-btn {
-    text-align: right;
+    text-align: center;
+  }
+
+  .btn-start {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
   }
 
 }
