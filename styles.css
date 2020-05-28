@@ -66,3 +66,44 @@ button {
   margin-top: 10%;
   width: 1.25em;
 }
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+label {
+  color: #CBC9CF;
+  font-size: 0.75em;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #CBC9CF;
+  background-color: #46424D;
+  display: grid;
+  width: 90%;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.form-input {
+  box-sizing: border-box;
+}
+
+.top-input {
+  grid-column: 1 / span 2;
+  border: none;
+  border-bottom-color: #CBC9CF;
+  margin: 8px 0;
+  padding: 12px 20px;
+}
+
+.left-input {
+  margin: 0 20px;
+}
+
+.right-input {
+  box-sizing: calc(border-box / 2);
+}
