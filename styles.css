@@ -1,6 +1,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #2B2733
+  background-color: #2B2733;
+  margin: 0;
 }
 
 h1 {
@@ -45,8 +46,13 @@ button {
 }
 
 .new-activity {
-  background-color: #46424D;
+  background-color: #2B2733;
   margin: 5%;
+}
+
+.left-background {
+  background-color: #46424D;
+  padding: 3%;
 }
 
 .btn-container {
@@ -64,11 +70,16 @@ button {
   border-left: solid;
   border-color: #46424D;
   padding: 5%;
+  padding-top: 10%;
 }
 
 .icon {
   margin-top: 10%;
   width: 1.25em;
+}
+
+.default-message {
+  text-align: center;
 }
 
 form {
