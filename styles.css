@@ -26,11 +26,15 @@ button {
   flex: 0 1 calc(20% - 1em);
 }
 
+.title-bar {
+  background-color: #46424D;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
 .title {
   background-color: #46424D;
-  text-align: center;
-  width: 100%;
-  margin: 0;
 }
 
 .activities {
