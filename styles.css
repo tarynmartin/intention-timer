@@ -124,7 +124,8 @@ input {
   width: 100%;
 }
 
-.num-input {
+.min-input,
+.sec-input {
   width: 100%;
 }
 
