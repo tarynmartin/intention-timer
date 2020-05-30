@@ -16,8 +16,8 @@ p {
 
 button {
   border: solid 0.5px white;
-  border-radius: 3%;
   background-color: #46424D;
+  border-radius: 3%;
   padding: 0.75%;
   font-size: 1.5vw;
   color: #FFF;
@@ -63,6 +63,10 @@ button {
   grid-gap: 12%;
   margin-bottom: 5%;
 }
+
+.study-btn,
+.meditate-btn,
+.exercise-btn, {}
 
 .btn-text {
   margin: 0;
@@ -133,7 +137,7 @@ input {
   grid-column: 3;
 }
 
-.start-btn {
+.start-activity-btn {
   background-color: white;
   color: #2B2733;
   grid-column: -1;
