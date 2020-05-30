@@ -10,6 +10,7 @@ h1 {
 }
 
 p {
+  margin: 0;
   font-weight: 300;
   color: #CBC9CF;
 }
@@ -21,10 +22,11 @@ button {
   padding: 0.75%;
   font-size: 1.5vw;
   color: #FFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 1 calc(20% - 1em);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
 }
 
 .title-bar {
@@ -64,21 +66,11 @@ button {
   margin-bottom: 5%;
 }
 
-.btn-text {
-  margin: 0;
-  margin-bottom: 10%;
-}
-
 .past-activities {
   border-left: solid;
   border-color: #46424D;
   padding: 5%;
   padding-top: 10%;
-}
-
-.icon {
-  margin-top: 10%;
-  width: 1.25em;
 }
 
 .default-message {
@@ -133,30 +125,27 @@ input {
   grid-column: 3;
 }
 
-.start-btn {
+.start-activity-btn {
   background-color: white;
   color: #2B2733;
-  grid-column: -1;
   padding: 0.5em 1.5em;
 }
 
-.btn-start {
-display: grid;
-grid-template-columns: 2fr 2fr 2fr;
-padding: 10px 0;
-}
-
 @media screen and (max-width: 949px) {
+  .left-background {
+    display: flex;
+    flex-direction: column;
+  }
+
   .icon,
   .btn-text {
-    font-size: 3em;
+    font-size: 2em;
+    margin: 2%;
   }
 
   .activities {
     display: flex;
-    display: grid;
     flex-direction: column;
-    grid-template-columns: 1fr;
   }
 
   .past-activities {
@@ -166,20 +155,25 @@ padding: 10px 0;
     padding: 2%;
   }
 
-  .start-btn,
   .btn-container {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .study-btn,
   .meditate-btn,
   .exercise-btn {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     margin: 0 20%;
     margin-bottom: 2em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-text {
+    padding: 5%
   }
 
   .start-btn {
@@ -187,18 +181,38 @@ padding: 10px 0;
   }
 
   .btn-start {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  }
-
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (min-width: 950px) {
+  .left-background {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .btn-text {
+    margin: 0;
+    margin-bottom: 10%;
+  }
+
+  .icon {
+    margin-top: 10px;
+    width: 1.25em;
+  }
+
+  .btn-start {
+    display: flex;
+    grid-template-columns: 2fr 2fr 2fr;
+    padding: 10px 0;
+  }
+
+  .start-activity-btn {
+    align-content: flex-end;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-
 
 }
