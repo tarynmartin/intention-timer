@@ -20,7 +20,7 @@ function changeColor(event) { 
     alert('WE DID IT!')
   } else if (event.target.className === 'meditate-btn') {
     alert('HELL YEAH!!!')
-  } else {
+  } else if (event.target.className === 'exercise-btn') {
     alert('BOOOOOOM!')
   }
 }
