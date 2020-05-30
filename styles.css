@@ -16,7 +16,7 @@ p {
 
 button {
   border: solid 0.5px white;
-  border-radius: 5%;
+  border-radius: 3%;
   background-color: #46424D;
   padding: 0.75%;
   font-size: 1.5vw;
@@ -54,6 +54,7 @@ button {
   background-color: #46424D;
   padding: 5% 12%;
   box-shadow: 0 3px 3px #26222D;
+  border-radius: 0.5%;
 }
 
 .btn-container {
