@@ -1,0 +1,76 @@
+body {
+  background: #46424D;
+}
+
+h1 {
+  color: #FFF;
+}
+
+h2 {
+  color: #FFF;
+}
+
+.start-clock-btn {
+  width: 120px;
+  height: 120px;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-style: 2px;
+  border-color: #FFF;
+  color: #FFF;
+  background-color: #46424D;
+  border-radius: 100%;
+  overflow: none;
+  text-align: center;
+}
+
+
+.start-clock-btn-study {
+  width: 120px;
+  height: 120px;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-style: 2px;
+  border-color: #B3FD78;
+  color: #FFF;
+  background-color: #46424D;
+  border-radius: 100%;
+  overflow: none;
+  text-align: center;
+}
+
+.start-clock-btn-exercise {
+  width: 120px;
+  height: 120px;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-style: 2px;
+  border-color: #FFF;
+  color: #FFF;
+  background-color: #FD8078;
+  border-radius: 100%;
+  overflow: none;
+  text-align: center;
+}
+
+.start-clock-btn-meditate {
+  width: 120px;
+  height: 120px;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-style: 2px;
+  border-color: #FFF;
+  color: #FFF;
+  background-color: #C278FD;
+  border-radius: 100%;
+  overflow: none;
+  text-align: center;
+}
