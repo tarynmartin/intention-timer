@@ -53,6 +53,7 @@ button {
 .left-background {
   background-color: #46424D;
   padding: 5% 12%;
+  box-shadow: 0 3px 3px #26222D;
 }
 
 .btn-container {
