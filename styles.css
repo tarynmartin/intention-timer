@@ -67,6 +67,23 @@ button {
   margin-bottom: 10%;
 }
 
+.study-btn-active {
+  border-color: #B3FD78;
+  color: #B3FD78;
+}
+
+.meditate-btn-active {
+  border-color: #C278FD;
+  color: #C278FD;
+}
+
+.exercise-btn-active {
+  border-color: #FD8078;
+  color: #FD8078;
+}
+
+
+
 .past-activities {
   border-left: solid;
   border-color: #46424D;
