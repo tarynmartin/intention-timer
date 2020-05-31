@@ -10,8 +10,6 @@ var exerciseIcon = document.querySelector('.exercise-icon');
 var studyBtn = document.querySelector('.study-btn');
 var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
-var minutesError = document.querySelector('.minutes-error');
-var secondsError = document.querySelector('.seconds-error');
 
 
 var currentActivity;
@@ -76,6 +74,8 @@ console.log(currentActivity);
 }
 
 function checkInput() {
+  var minutesError = document.querySelector('.minutes-error');
+  var secondsError = document.querySelector('.seconds-error');
   var categoryError = document.querySelector('.category-error');
   var descriptionError = document.querySelector('.description-error');
 
@@ -93,6 +93,7 @@ function checkInput() {
 
 function verifyNumberInput(event) {
   var verifyNumber = document.querySelector('.verify-number');
+  
   if (event.key === "e" || event.key === "E") {
       return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Please choose a number between 0 and 60; no other characters allowed";
   } else if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
