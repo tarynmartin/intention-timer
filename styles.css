@@ -68,7 +68,8 @@ button {
 
 .study-icon,
 .meditate-icon,
-.exercise-icon {
+.exercise-icon,
+.warning-icon {
   width: 1.5em;
   margin: 4%;
 }
