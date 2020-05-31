@@ -82,8 +82,6 @@ button {
   color: #FD8078;
 }
 
-
-
 .past-activities {
   border-left: solid;
   border-color: #46424D;
@@ -161,12 +159,10 @@ padding: 10px 0;
 
 .study-icon,
 .meditate-icon,
-.exercise-icon,
-.btn-text {
+.exercise-icon {
   width: 0.75em;
-  font-size: 3em;
+  font-size: 5em;
 }
-
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
 @media screen and (max-width: 768px) {
