@@ -17,8 +17,6 @@ p {
 button {
   border: solid 0.5px white;
   border-radius: 5%;
-  background-color: #46424D;
-  padding: 0.75%;
   font-size: 1.5vw;
   color: #FFF;
   display: flex;
@@ -62,9 +60,17 @@ button {
   margin-bottom: 5%;
 }
 
-.btn-text {
-  margin: 0;
-  margin-bottom: 10%;
+.study-btn,
+.meditate-btn,
+.exercise-btn {
+  background-color: #46424D;
+}
+
+.study-icon,
+.meditate-icon,
+.exercise-icon {
+  width: 1.5em;
+  margin: 4%;
 }
 
 .study-btn-active {
@@ -82,21 +88,12 @@ button {
   color: #FD8078;
 }
 
-
-
 .past-activities {
   border-left: solid;
   border-color: #46424D;
   padding: 5%;
   padding-top: 10%;
   height: 100%;
-}
-
-.study-icon,
-.meditate-icon,
-.exercise-icon {
-  margin-top: 10%;
-  width: 1.25em;
 }
 
 .default-message {
@@ -166,14 +163,8 @@ grid-template-columns: 2fr 2fr 2fr;
 padding: 10px 0;
 }
 
-
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
 @media screen and (max-width: 768px) {
-  .icon,
-  .btn-text {
-    font-size: 3em;
-  }
-
   .activities {
     display: flex;
     display: grid;
@@ -202,7 +193,7 @@ padding: 10px 0;
   .study-btn,
   .meditate-btn,
   .exercise-btn {
-    display: grid;
+    display: flex;
     margin: 0 20%;
     margin-bottom: 2em;
   }
@@ -219,13 +210,6 @@ padding: 10px 0;
 }
 
 @media screen and (max-width: 1280px) {
-  .study-icon,
-  .meditate-icon,
-  .exercise-icon,
-  .btn-text {
-    font-size: 3em;
-  }
-
   .activities {
     display: flex;
     display: grid;
