@@ -2,7 +2,7 @@
 var userDescription = document.querySelector('.info-added');
 var userMin = document.querySelector('.min-input');
 var userSec = document.querySelector('.sec-input');
-var startBtn = document.querySelector('.start-activity-btn');
+var startBtn = document.querySelector('.start-btn');
 var activityContainer = document.querySelector('.btn-container');
 var studyIcon = document.querySelector('.study-icon');
 var meditateIcon = document.querySelector('.meditate-icon');
@@ -15,6 +15,7 @@ var currentActivity;
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
+startBtn.addEventListener('click', startActivity);
 
 
 function changeColor(event) { 
@@ -56,6 +57,33 @@ function activateExercise() {
   meditateIcon.src = "assets/meditate.svg";
   currentCategory = "exercise-btn-active";
 }
-// tagline1.innerText = tagline1Input.value;
-// tagline2.innerText = tagline2Input.value;
-// bookTitle.innerText = titleInput.value;
+
+function startActivity(event) {
+  checkInput();
+}
+
+function createActivity() {
+  var currentDescription = userDescription.value;
+  var currentMinutes = userMin.value;
+  var currentSeconds = userSec.value;
+var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
+console.log(currentActivity);
+}
+
+function checkInput() {
+  var categoryError = document.querySelector('.category-error');
+  var descriptionError = document.querySelector('.description-error');
+  var minutesError = document.querySelector('.minutes-error');
+  var secondsError = document.querySelector('.seconds-error');
+
+  if (currentCategory === undefined) {
+    return categoryError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A category is required";
+  } else if (userDescription.value.length < 3) {
+    return descriptionError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A description is required";
+  }else if (userMin.value === '') {
+    return minutesError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Minutes are required";
+  }else if (userSec.value === '') {
+    return secondsError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Seconds are required";
+  }
+  createActivity();
+}
