@@ -183,6 +183,10 @@ grid-template-columns: 2fr 2fr 2fr;
 padding: 10px 0;
 }
 
+.hidden {
+  display: none;
+}
+
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
 @media screen and (max-width: 768px) {
   .activities {
