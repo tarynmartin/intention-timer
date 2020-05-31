@@ -18,11 +18,11 @@ activityContainer.addEventListener('click', changeColor);
 
 
 function changeColor(event) { 
-  if (event.target.className === 'study-btn') {
+  if (event.target.className === 'study-btn' || event.target.className === 'study-icon') {
     activateStudy();
-  } else if (event.target.className === 'meditate-btn') {
+  } else if (event.target.className === 'meditate-btn' || event.target.className === 'meditate-icon') {
     activateMeditate();
-  } else if (event.target.className === 'exercise-btn') {
+  } else if (event.target.className === 'exercise-btn' || event.target.className === 'exercise-icon') {
     activateExercise();
   }
 }
