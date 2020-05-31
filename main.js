@@ -10,12 +10,15 @@ var exerciseIcon = document.querySelector('.exercise-icon');
 var studyBtn = document.querySelector('.study-btn');
 var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
+var minutesError = document.querySelector('.minutes-error');
+var secondsError = document.querySelector('.seconds-error');
 
 var currentActivity;
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
 startBtn.addEventListener('click', startActivity);
+userMin.addEventListener('keyup', verifyNumberInput);
 
 
 function changeColor(event) { 
@@ -73,8 +76,6 @@ console.log(currentActivity);
 function checkInput() {
   var categoryError = document.querySelector('.category-error');
   var descriptionError = document.querySelector('.description-error');
-  var minutesError = document.querySelector('.minutes-error');
-  var secondsError = document.querySelector('.seconds-error');
 
   if (currentCategory === undefined) {
     return categoryError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A category is required";
@@ -86,4 +87,12 @@ function checkInput() {
     return secondsError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Seconds are required";
   }
   createActivity();
+}
+
+function verifyNumberInput(event) {
+  if (event.key === "e" || event.key === "E") {
+      return minutesError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Please choose a number between 0 and 60; no other characters allowed";
+  } else if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
+    return minutesError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
+  }
 }
