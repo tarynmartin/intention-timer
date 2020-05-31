@@ -17,8 +17,6 @@ p {
 button {
   border: solid 0.5px white;
   border-radius: 5%;
-  background-color: #46424D;
-  padding: 0.75%;
   font-size: 1.5vw;
   color: #FFF;
   display: flex;
@@ -62,9 +60,17 @@ button {
   margin-bottom: 5%;
 }
 
-.btn-text {
-  margin: 0;
-  margin-bottom: 10%;
+.study-btn,
+.meditate-btn,
+.exercise-btn {
+  background-color: #46424D;
+}
+
+.study-icon,
+.meditate-icon,
+.exercise-icon {
+  width: 1.5em;
+  margin: 4%;
 }
 
 .study-btn-active {
@@ -155,12 +161,6 @@ input {
 display: grid;
 grid-template-columns: 2fr 2fr 2fr;
 padding: 10px 0;
-}
-
-.study-icon,
-.meditate-icon,
-.exercise-icon {
-  width: 1.5em;
 }
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
