@@ -11,25 +11,50 @@ var studyBtn = document.querySelector('.study-btn');
 var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
 
-
-var activityContainer = document.querySelector('.btn-container');
-
- 
+var currentActivity;
+ var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
 
 
 function changeColor(event) { 
-  if (event.target.className === 'study-btn') {
-    studyIcon.src = 'assets/study-active.svg';
-    studyBtn.classList.add('study-btn-active');
-  } else if (event.target.className === 'meditate-btn') {
-    meditateIcon.src = 'assets/meditate-active.svg';
-    meditateBtn.classList.add('meditate-btn-active');
-  } else if (event.target.className === 'exercise-btn') {
-    exerciseIcon.src = 'assets/exercise-active.svg';
-    exerciseBtn.classList.add('exercise-btn-active');
+  if (event.target.className === 'study-btn' || event.target.className === 'study-icon') {
+    activateStudy();
+  } else if (event.target.className === 'meditate-btn' || event.target.className === 'meditate-icon') {
+    activateMeditate();
+  } else if (event.target.className === 'exercise-btn' || event.target.className === 'exercise-icon') {
+    activateExercise();
   }
+}
+
+function activateStudy() {
+  studyIcon.src = 'assets/study-active.svg';
+  studyBtn.classList.add('study-btn-active');
+  meditateBtn.classList.remove("meditate-btn-active");
+  meditateIcon.src = "assets/meditate.svg";
+  exerciseBtn.classList.remove('exercise-btn-active');
+  exerciseIcon.src = "assets/exercise.svg";
+  currentCategory = ".study-btn-active";
+}
+
+function activateMeditate() {
+  meditateIcon.src = 'assets/meditate-active.svg';
+  meditateBtn.classList.add('meditate-btn-active');
+  exerciseBtn.classList.remove('exercise-btn-active');
+  exerciseIcon.src = "assets/exercise.svg";
+  studyIcon.src = 'assets/study.svg';
+  studyBtn.classList.remove('study-btn-active');
+  currentCategory = ".meditate-btn-active";
+}
+
+function activateExercise() {
+  exerciseIcon.src = 'assets/exercise-active.svg';
+  exerciseBtn.classList.add('exercise-btn-active');
+  studyIcon.src = 'assets/study.svg';
+  studyBtn.classList.remove('study-btn-active');
+  meditateBtn.classList.remove("meditate-btn-active");
+  meditateIcon.src = "assets/meditate.svg";
+  currentCategory = "exercise-btn-active";
 }
 // tagline1.innerText = tagline1Input.value;
 // tagline2.innerText = tagline2Input.value;
