@@ -145,6 +145,7 @@ input {
   padding-bottom: 35px;
 }
 
+.verify-number,
 .category-error,
 .description-error,
 .minutes-error,
