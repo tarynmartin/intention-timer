@@ -10,6 +10,7 @@ var exerciseIcon = document.querySelector('.exercise-icon');
 var studyBtn = document.querySelector('.study-btn');
 var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
+var startClockBtn = document.querySelector('.start-clock-btn')
 
 
 var currentActivity;
@@ -17,9 +18,9 @@ var currentActivity;
 
 activityContainer.addEventListener('click', changeColor);
 startBtn.addEventListener('click', startActivity);
+startClockBtn.addEventListener('click', startClock);
 userMin.addEventListener('keyup', verifyNumberInput);
 userSec.addEventListener('keyup', verifyNumberInput);
-
 
 function changeColor(event) { 
   if (event.target.className === 'study-btn' || event.target.className === 'study-icon') {
@@ -118,9 +119,9 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-window.onload = function () {
-  userMinutes = userMin.value
-  userSeconds = userSec.value
+function startClock() {
+  userMinutes = 1
+  userSeconds = 2
   var userInput = (60 * userMinutes + userSeconds),
     display = document.querySelector('#time');
   startTimer(userInput, display);
