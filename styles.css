@@ -48,7 +48,14 @@ button {
   margin: 5%;
 }
 
-.left-background {
+.current-activity {
+  background-color: #2B2733;
+  margin: 5%;
+  height: 100%;
+}
+
+.left-background,
+.timer-background {
   background-color: #46424D;
   padding: 5% 12%;
 }
@@ -102,7 +109,6 @@ button {
   border-color: #46424D;
   padding: 5%;
   padding-top: 10%;
-  height: 100%;
 }
 
 .default-message {
