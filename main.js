@@ -17,8 +17,8 @@ var currentActivity;
 
 activityContainer.addEventListener('click', changeColor);
 startBtn.addEventListener('click', startActivity);
-userMin.addEventListener('keyup', verifyNumberInput);
-userSec.addEventListener('keyup', verifyNumberInput);
+userMin.addEventListener('keypress', verifyNumberInput);
+userSec.addEventListener('keypress', verifyNumberInput);
 
 
 function changeColor(event) { 
@@ -93,9 +93,9 @@ function checkInput() {
 
 function verifyNumberInput(event) {
   var verifyNumber = document.querySelector('.verify-number');
-  
+
   if (event.key === "e" || event.key === "E") {
-      return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Please choose a number between 0 and 60; no other characters allowed";
+    event.preventDefault();
   } else if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
     return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
   }
