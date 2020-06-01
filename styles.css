@@ -78,6 +78,13 @@ button {
   padding: 5% 12%;
 }
 
+.timer-background {
+  display: grid;
+  grid-column: auto;
+  justify-content: center;
+  text-align: center;
+}
+
 .btn-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
