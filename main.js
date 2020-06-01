@@ -10,8 +10,9 @@ var exerciseIcon = document.querySelector('.exercise-icon');
 var studyBtn = document.querySelector('.study-btn');
 var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
-var startClockBtn = document.querySelector('.start-clock-btn')
-
+var startClockBtn = document.querySelector('.start-clock-btn');
+var newActivityView = document.querySelector('.new-activity');
+var currentActivityView = document.querySelector('.current-activty');
 
 var currentActivity;
  var currentCategory;
@@ -61,6 +62,39 @@ function activateExercise() {
   currentCategory = "exercise-btn-active";
 }
 
+// homeView.classList.add('hidden');
+// savedView.classList.remove('hidden');
+// homeButton.classList.remove('hidden');
+// clasclass
+
+
+
+
+
+
+
+// determine view states
+// choose activity view
+// current activity view
+// eventually we will need to create past activity view
+// view is changned on click by clicking start activity button
+// remove choose view
+// add current activity view
+
+
+
+// current activity
+// cirgle
+
+
+function changeView() {
+  var newActivityView = document.querySelector('.new-activity');
+  var currentActivityView = document.querySelector('.current-activity');
+
+  newActivityView.classList.add('hidden');
+  currentActivityView.classList.remove('hidden');
+}
+
 function startActivity(event) {
   checkInput();
 }
@@ -69,8 +103,9 @@ function createActivity() {
   var currentDescription = userDescription.value;
   var currentMinutes = userMin.value;
   var currentSeconds = userSec.value;
-var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
-console.log(currentActivity);
+  var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
+
+  changeView();
 }
 
 function checkInput() {
