@@ -54,6 +54,14 @@ button {
   height: 100%;
 }
 
+.countdown-clock {
+  margin-bottom: 15%;
+}
+
+#time {
+  color: #FFF;
+}
+
 .start-clock-btn {
   width: 150px;
   height: 150px;
