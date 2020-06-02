@@ -135,6 +135,7 @@ function checkInput() {
 
 function verifyNumberInput(event) {
   if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
+    event.target.value = null;
     return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
   }
 }
@@ -145,29 +146,12 @@ function stopEInput(event) {
   }
 }
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
 function startClock() {
-  userMinutes = userMin.value;
-  userSeconds = userSec.value;
-  var userInput = (6 * userMinutes + userSeconds),
-    display = document.querySelector('#time');
-  startTimer(userInput, display);
+  var userInput = (currentActivity.minutes + currentActivity.seconds),
+
+  display = document.querySelector('#time');
+
+  currentActivity.startTimer(userInput, display);
 }
 
 // var deadline = date.Now()
