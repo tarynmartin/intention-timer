@@ -1,5 +1,5 @@
 var userDescription = document.querySelector('.info-added');
-var userMin = document.querySelector('.min-input');
+var userMin = document.querySelector('.minutes-input');
 var userSec = document.querySelector('.sec-input');
 var startBtn = document.querySelector('.start-btn');
 var activityContainer = document.querySelector('.btn-container');
