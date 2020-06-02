@@ -25,6 +25,9 @@ button {
   flex: 0 1 calc(20% - 1em);
 }
 
+.hidden {
+  display: none;
+}
 /* ~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~ */
 
 .title-bar {
@@ -229,21 +232,19 @@ input {
   grid-column: 3;
 }
 
+/* ~~~~~~~~~~~~~~ START ACTIVITY BUTTON ~~~~~~~~~~~~~~~~ */
 .start-btn {
   background-color: white;
   color: #2B2733;
   grid-column: -1;
   padding: 0.5em 1.5em;
+  white-space: nowrap;
 }
 
 .btn-start {
 display: grid;
 grid-template-columns: 2fr 2fr 2fr;
 padding: 10px 0;
-}
-
-.hidden {
-  display: none;
 }
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
@@ -281,11 +282,8 @@ padding: 10px 0;
     margin-bottom: 2em;
   }
 
-  .start-btn {
-    grid-column: 2;
-  }
-
   .btn-start {
+  display: flex;
   justify-content: center;
   padding: 10px 0;
   }
@@ -307,11 +305,8 @@ padding: 10px 0;
     padding: 2%;
   }
 
-  .start-btn {
-    grid-column: 2;
-  }
-
   .btn-start {
+  display: flex;
   justify-content: center;
   padding: 10px 0;
   }
