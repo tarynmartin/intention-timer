@@ -10,14 +10,17 @@ var studyBtn = document.querySelector('.study-btn');
 var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
 var startClockBtn = document.querySelector('.start-clock-btn');
+var verifyNumber = document.querySelector('.verify-number');
 
 var currentActivity;
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
 startBtn.addEventListener('click', startActivity);
-userMin.addEventListener('keypress', verifyNumberInput);
-userSec.addEventListener('keypress', verifyNumberInput);
+userMin.addEventListener('keypress', stopEInput);
+userSec.addEventListener('keypress', stopEInput);
+userMin.addEventListener('keyup', verifyNumberInput);
+userSec.addEventListener('keyup', verifyNumberInput);
 
 function changeColor(event) { 
   if (event.target.className === 'study-btn' || event.target.className === 'study-icon') {
@@ -127,12 +130,15 @@ function checkInput() {
 }
 
 function verifyNumberInput(event) {
-  var verifyNumber = document.querySelector('.verify-number');
+  if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
+    startBtn.disabled = true;
+    return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
+  }
+}
 
+function stopEInput(event) {
   if (event.key === "e" || event.key === "E") {
     event.preventDefault();
-  } else if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
-    return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
   }
 }
 
