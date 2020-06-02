@@ -39,6 +39,7 @@ function activateStudy() {
   meditateIcon.src = "assets/meditate.svg";
   exerciseBtn.classList.remove('exercise-btn-active');
   exerciseIcon.src = "assets/exercise.svg";
+  startClockBtn.style.borderColor = '#B3FD78';
 
   currentCategory = ".study-btn-active";
 }
@@ -50,6 +51,7 @@ function activateMeditate() {
   exerciseIcon.src = "assets/exercise.svg";
   studyBtn.classList.remove('study-btn-active');
   studyIcon.src = 'assets/study.svg';
+  startClockBtn.style.borderColor = '#C278FD';
 
   currentCategory = ".meditate-btn-active";
 }
@@ -61,6 +63,7 @@ function activateExercise() {
   studyIcon.src = 'assets/study.svg';
   meditateBtn.classList.remove("meditate-btn-active");
   meditateIcon.src = "assets/meditate.svg";
+  startClockBtn.style.borderColor = '#FD8078';
 
   currentCategory = "exercise-btn-active";
 }
@@ -131,7 +134,6 @@ function checkInput() {
 
 function verifyNumberInput(event) {
   if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
-    startBtn.disabled = true;
     return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
   }
 }
