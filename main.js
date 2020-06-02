@@ -17,6 +17,7 @@ var currentActivity;
 
 activityContainer.addEventListener('click', changeColor);
 startBtn.addEventListener('click', startActivity);
+startClockBtn.addEventListener('click', startClock);
 userMin.addEventListener('keypress', stopEInput);
 userSec.addEventListener('keypress', stopEInput);
 userMin.addEventListener('keyup', verifyNumberInput);
@@ -144,30 +145,30 @@ function stopEInput(event) {
   }
 }
 
-// function startTimer(duration, display) {
-//     var timer = duration, minutes, seconds;
-//     setInterval(function () {
-//         minutes = parseInt(timer / 60, 10)
-//         seconds = parseInt(timer % 60, 10);
-//
-//         minutes = minutes < 10 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-//
-//         display.textContent = minutes + ":" + seconds;
-//
-//         if (--timer < 0) {
-//             timer = duration;
-//         }
-//     }, 1000);
-// }
-//
-// function startClock() {
-//   userMinutes = 1
-//   userSeconds = 2
-//   var userInput = (60 * userMinutes + userSeconds),
-//     display = document.querySelector('#time');
-//   startTimer(userInput, display);
-// }
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+function startClock() {
+  userMinutes = userMin.value;
+  userSeconds = userSec.value;
+  var userInput = (6 * userMinutes + userSeconds),
+    display = document.querySelector('#time');
+  startTimer(userInput, display);
+}
 
 // var deadline = date.Now()
 // function getUserTime(endtime) {
