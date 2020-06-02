@@ -25,6 +25,11 @@ button {
   flex: 0 1 calc(20% - 1em);
 }
 
+.hidden {
+  display: none;
+}
+/* ~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~ */
+
 .title-bar {
   background-color: #46424D;
   display: flex;
@@ -36,6 +41,8 @@ button {
   background-color: #46424D;
 }
 
+/* ~~~~~~~~~~~~~~ CONTAINER ~~~~~~~~~~~~~~~~ */
+
 .activities {
   display: flex;
   display: grid;
@@ -43,54 +50,16 @@ button {
   grid-template-columns: 2fr 1fr;
 }
 
+/* ~~~~~~~~~~~~~~ NEW ACTIVITY VIEW ~~~~~~~~~~~~~~~~ */
+
 .new-activity {
   background-color: #2B2733;
   margin: 5%;
 }
 
-.current-activity {
-  background-color: #2B2733;
-  margin: 5%;
-  height: 100%;
-}
-
-.countdown-clock {
-  margin-bottom: 15%;
-}
-
-#time {
-  color: #FFF;
-}
-
-.start-clock-btn {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: space-around;
-  outline: none;
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: 300;
-  border-style: 2px;
-  border-color: #FFF;
-  color: #FFF;
-  background-color: #46424D;
-  border-radius: 100%;
-  overflow: none;
-  text-align: center;
-}
-
-.left-background,
-.timer-background {
+.left-background {
   background-color: #46424D;
   padding: 5% 12%;
-}
-
-.timer-background {
-  display: grid;
-  grid-column: auto;
-  justify-content: center;
-  text-align: center;
 }
 
 .btn-container {
@@ -125,17 +94,64 @@ button {
 .study-btn-active {
   border-color: #B3FD78;
   color: #B3FD78;
+  outline: none;
 }
 
 .meditate-btn-active {
   border-color: #C278FD;
   color: #C278FD;
+  outline: none;
 }
 
 .exercise-btn-active {
   border-color: #FD8078;
   color: #FD8078;
+  outline: none;
 }
+
+/* ~~~~~~~~~~~~~~ CURRENT ACTIVITY VIEW ~~~~~~~~~~~~~~~~ */
+.current-activity {
+  background-color: #2B2733;
+  margin: 5%;
+  height: 100%;
+}
+
+.timer-background {
+  display: grid;
+  grid-column: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: #46424D;
+  padding: 5% 12%;
+}
+
+.countdown-clock {
+  margin-bottom: 15%;
+}
+
+#time {
+  color: #FFF;
+}
+
+.start-clock-btn {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 300;
+  border-style: 2px;
+  border-color: #FFF;
+  color: #FFF;
+  background-color: #46424D;
+  border-radius: 100%;
+  overflow: none;
+  text-align: center;
+}
+
+/* ~~~~~~~~~~~~~~ PAST ACTIVITY VIEW ~~~~~~~~~~~~~~~~ */
 
 .past-activities {
   border-left: solid;
@@ -148,6 +164,7 @@ button {
   text-align: center;
 }
 
+/* ~~~~~~~~~~~~~~ FORM ~~~~~~~~~~~~~~~~ */
 form {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
@@ -157,8 +174,7 @@ form {
 
 label {
   color: #CBC9CF;
-  font-size: 0.75em;
-  margin-bottom: 5%;
+  height: 5%;
 }
 
 input {
@@ -169,6 +185,9 @@ input {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   margin-bottom: 5%;
+  color: #CBC9CF;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 0.95em;
 }
 
 .form-input {
@@ -180,8 +199,6 @@ input {
   border: none;
   border-bottom-color: #CBC9CF;
   margin: 8px 0;
-  padding-top: 10px;
-  padding-bottom: 35px;
 }
 
 .verify-number,
@@ -205,7 +222,7 @@ input {
   width: 100%;
 }
 
-.min-input,
+.minutes-input,
 .sec-input {
   width: 100%;
 }
@@ -215,21 +232,19 @@ input {
   grid-column: 3;
 }
 
+/* ~~~~~~~~~~~~~~ START ACTIVITY BUTTON ~~~~~~~~~~~~~~~~ */
 .start-btn {
   background-color: white;
   color: #2B2733;
   grid-column: -1;
   padding: 0.5em 1.5em;
+  white-space: nowrap;
 }
 
 .btn-start {
 display: grid;
 grid-template-columns: 2fr 2fr 2fr;
 padding: 10px 0;
-}
-
-.hidden {
-  display: none;
 }
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
@@ -267,11 +282,8 @@ padding: 10px 0;
     margin-bottom: 2em;
   }
 
-  .start-btn {
-    grid-column: 2;
-  }
-
   .btn-start {
+  display: flex;
   justify-content: center;
   padding: 10px 0;
   }
@@ -293,11 +305,8 @@ padding: 10px 0;
     padding: 2%;
   }
 
-  .start-btn {
-    grid-column: 2;
-  }
-
   .btn-start {
+  display: flex;
   justify-content: center;
   padding: 10px 0;
   }
