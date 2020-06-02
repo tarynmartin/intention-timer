@@ -91,16 +91,19 @@ button {
 .study-btn-active {
   border-color: #B3FD78;
   color: #B3FD78;
+  outline: none;
 }
 
 .meditate-btn-active {
   border-color: #C278FD;
   color: #C278FD;
+  outline: none;
 }
 
 .exercise-btn-active {
   border-color: #FD8078;
   color: #FD8078;
+  outline: none;
 }
 
 /* ~~~~~~~~~~~~~~ CURRENT ACTIVITY VIEW ~~~~~~~~~~~~~~~~ */
