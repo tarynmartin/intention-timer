@@ -172,7 +172,7 @@ form {
 label {
   color: #CBC9CF;
   font-size: 0.75em;
-  margin-bottom: 5%;
+  height: 5%;
 }
 
 input {
@@ -194,8 +194,6 @@ input {
   border: none;
   border-bottom-color: #CBC9CF;
   margin: 8px 0;
-  padding-top: 10px;
-  padding-bottom: 35px;
 }
 
 .verify-number,
