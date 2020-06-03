@@ -31,6 +31,7 @@ At the beginning of this project, we outlined a number of learning goals to act 
   + Refactor, refactor, refactor!
   + Finish Iteration 3
 ## Reflection
+Taryn - This project was really tough for me. There were some new concepts to learn how to use, and we were building a site from nothing! I definitely learned more about how to build a site from scratch, and how all of the little bits fit together. This was an amazing learning experience in seeing how HTML and CSS connect with JavaScript and how aspects need to be adjusted throughout the process to make sure everything works smoothly. I also learned a lot about working together, especially working remotely. I feel it was definitely harder to work remotely, because it is more time consuming to explain things to others. There isn't a screen handy for a person to point to, and sharing screens isn't the same as watching a person interact with the computer in person. I want to take what I have learned and refine and improve my skills and processes for projects in the future.
 ## Links
   + Deployed Site: https://bjjdestroyer.github.io/intention-timer/
   + Taryn Martin GitHub: https://github.com/bjjdestroyer
