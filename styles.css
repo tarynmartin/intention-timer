@@ -215,6 +215,7 @@ input {
   grid-row: 3;
   grid-column: 1 / -1;
   justify-content: center;
+  margin: 0;
 }
 
 .info-added {
@@ -245,6 +246,7 @@ input {
 .start-button-styling {
   grid-row: 3;
   grid-column: 3;
+  padding-top: 15%;
 }
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
@@ -289,8 +291,7 @@ input {
   }
 
   .start-button-styling {
-    grid-column: 1 / -1;
-    padding-left: 15%;
+    padding-bottom: 7%;
   }
 
 }
@@ -313,10 +314,6 @@ input {
   .start-button-styling {
     grid-column: 1 / -1;
     padding-left: 15%;
+    padding-top: 10%;
   }
-}
-
-@media screen and (min-width: 1280px) {
-
-
 }
