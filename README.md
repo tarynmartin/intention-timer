@@ -15,15 +15,24 @@ At the beginning of this project, we outlined a number of learning goals to act 
   3. Synthesize a working product from all the pieces (DOM, Data Model, JS, CSS & HTML) we've come across this module
   4. Develop our skills working and communicating as a group
 ## Project Status
+  + 6/3/2020, 8:55 AM- We have
 ## Project Screenshots
 1. Our wire-framed version of the website. We found that mapping out the wire frame with high detail gave us a stronger understanding of the html framework and css styling that needed to unfold.
   + ![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.pdf)
   + ![](assets/README_screenshots/jkw-int-timer-wireframe-iphone.pdf)
   + ![](assets/README_screenshots/jkw-int-timer-past-activity-card.pdf)
-2. ![](assets/README_screenshots/jkw-button-container.gif)
-3. ![](assets/README_screenshots/jkw-center-activity-btns.gif)
-4. ![](assets/README_screenshots/jkw-current-activity-section.gif)
-5. ![](assets/README_screenshots/jkw-form-container.gif)
+2. As we refined our understanding of CSS and it's relationship to HTML, our application started taking shape!
+  + ![](assets/README_screenshots/jkw-button-container.gif)
+  + ![](assets/README_screenshots/jkw-form-container.gif)
+  + ![](assets/README_screenshots/jkw-center-activity-btns.gif)
+3. This is the current activity view:
+  + ![](assets/README_screenshots/jkw-current-activity-section.gif)
 ## Next Steps
+  + Refactor, refactor, refactor!
+  + Finish Iteration 3
 ## Reflection
 ## Links
+  + Deployed Site:
+  + Taryn Martin GitHub: https://github.com/bjjdestroyer
+  + Joe Varela GitHub: https://github.com/jobbotrock
+  + Jake West GitHub: https://github.com/jkwest-93
