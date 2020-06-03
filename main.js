@@ -11,12 +11,15 @@ var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
 var startClockBtn = document.querySelector('.start-clock-btn');
 var verifyNumber = document.querySelector('.verify-number');
+var timerDisplay = document.querySelector("#time");
+var newActivityForm = document.querySelector('.form-input');
 
 var currentActivity;
+var activitiesArray = []; //this is the data model
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
-startBtn.addEventListener('click', startActivity);
+newActivityForm.addEventListener('submit', createActivity);
 startClockBtn.addEventListener('click', startClock);
 userMin.addEventListener('keypress', stopEInput);
 userSec.addEventListener('keypress', stopEInput);
@@ -97,22 +100,27 @@ function activateExercise() {
 function changeView() {
   var newActivityView = document.querySelector('.new-activity');
   var currentActivityView = document.querySelector('.current-activity');
+  var timerInputDescription = document.querySelector('.user-input-description');
+  var timeDisplayTimer = document.querySelector('#time');
+
+  timerInputDescription.innerHTML = activitiesArray[0].description;
+  timeDisplayTimer.innerHTML = `${activitiesArray[0].minutes}:${activitiesArray[0].seconds}`
 
   newActivityView.classList.add('hidden');
   currentActivityView.classList.remove('hidden');
 }
 
-function startActivity(event) {
-  checkInput();
-}
-
 function createActivity() {
+  checkInput()
   var currentDescription = userDescription.value;
   var currentMinutes = userMin.value;
   var currentSeconds = userSec.value;
   var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
 
-  changeView();
+  activitiesArray.push(currentActivity);
+
+  changeView()
+  event.preventDefault();
 }
 
 function checkInput() {
@@ -130,7 +138,6 @@ function checkInput() {
   }else if (userSec.value === '') {
     return secondsError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Seconds are required";
   }
-  createActivity();
 }
 
 function verifyNumberInput(event) {
