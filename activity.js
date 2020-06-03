@@ -8,9 +8,24 @@ class Activity {
     this.completed = false;
   }
 
-  startTimer() {
-    // This should start the timer for whatever activity selected
-    return this.id;
+  startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var x = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = 0;
+          clearInterval(x);
+          alert("Congratulations!");
+        }
+
+    }, 1000);
   }
 
   markComplete() {
