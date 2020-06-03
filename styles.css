@@ -309,6 +309,11 @@ input {
     border-color: #46424D;
     padding: 2%;
   }
+
+  .start-button-styling {
+    grid-column: 1 / -1;
+    padding-left: 15%;
+  }
 }
 
 @media screen and (min-width: 1280px) {
