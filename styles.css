@@ -215,6 +215,7 @@ input {
   grid-row: 3;
   grid-column: 1 / -1;
   justify-content: center;
+  margin: 0;
 }
 
 .info-added {
@@ -245,7 +246,7 @@ input {
 .start-button-styling {
   grid-row: 3;
   grid-column: 3;
-  padding-top: 25%;
+  padding-top: 15%;
 }
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
