@@ -168,7 +168,7 @@ button {
 form {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(3, auto);
   justify-content: space-between;
 }
 
@@ -236,9 +236,11 @@ input {
 .start-btn {
   background-color: white;
   color: #2B2733;
-  grid-column: -1;
+  grid-row: 3;
+  grid-column: 3;
   padding: 0.5em 1.5em;
   white-space: nowrap;
+  width: 80%;
 }
 
 .btn-start {
