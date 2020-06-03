@@ -123,7 +123,7 @@ function checkInput() {
 
   if (currentCategory === undefined) {
     return categoryError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A category is required";
-  } else if (userDescription.value.length < 3) {
+  } else if (userDescription.value.length < 1) {
     return descriptionError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A description is required";
   }else if (userMin.value === '') {
     return minutesError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Minutes are required";
