@@ -100,6 +100,11 @@ function activateExercise() {
 function changeView() {
   var newActivityView = document.querySelector('.new-activity');
   var currentActivityView = document.querySelector('.current-activity');
+  var timerInputDescription = document.querySelector('.user-input-description');
+  var timeDisplayTimer = document.querySelector('#time');
+
+  timerInputDescription.innerHTML = activitiesArray[0].description;
+  timeDisplayTimer.innerHTML = `${activitiesArray[0].minutes}:${activitiesArray[0].seconds}`
 
   newActivityView.classList.add('hidden');
   currentActivityView.classList.remove('hidden');
