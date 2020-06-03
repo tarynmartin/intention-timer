@@ -15,7 +15,7 @@ var timerDisplay = document.querySelector("#time");
 var newActivityForm = document.querySelector('.form-input');
 
 var currentActivity;
-var activitiesArray = []; //this is the data model
+var activitiesArray = [];
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);

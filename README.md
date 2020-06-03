@@ -32,7 +32,7 @@ At the beginning of this project, we outlined a number of learning goals to act 
   + Finish Iteration 3
 ## Reflection
 ## Links
-  + Deployed Site:
+  + Deployed Site: https://bjjdestroyer.github.io/intention-timer/
   + Taryn Martin GitHub: https://github.com/bjjdestroyer
   + Joe Varela GitHub: https://github.com/jobbotrock
   + Jake West GitHub: https://github.com/jkwest-93
