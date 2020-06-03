@@ -168,8 +168,7 @@ button {
 form {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
-  grid-template-rows: auto;
-  justify-content: space-between;
+  grid-template-rows: repeat(3, auto);
 }
 
 label {
@@ -236,15 +235,16 @@ input {
 .start-btn {
   background-color: white;
   color: #2B2733;
-  grid-column: -1;
+  grid-row: 3;
+  grid-column: 3;
   padding: 0.5em 1.5em;
   white-space: nowrap;
+  width: 80%;
 }
 
-.btn-start {
-display: grid;
-grid-template-columns: 2fr 2fr 2fr;
-padding: 10px 0;
+.start-button-styling {
+  grid-row: 3;
+  grid-column: 3;
 }
 
 /*~~~~~~Media Queries~~~~~~~~~~~~*/
@@ -258,6 +258,10 @@ padding: 10px 0;
 
   .left-background {
     padding: 1% 3%;
+  }
+
+  .select-title {
+    padding-bottom: 7%;
   }
 
   .past-activities {
@@ -280,12 +284,13 @@ padding: 10px 0;
     display: flex;
     margin: 0 20%;
     margin-bottom: 2em;
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .btn-start {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
+  .start-button-styling {
+    grid-column: 1 / -1;
+    padding-left: 15%;
   }
 
 }
@@ -305,10 +310,9 @@ padding: 10px 0;
     padding: 2%;
   }
 
-  .btn-start {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
+  .start-button-styling {
+    grid-column: 1 / -1;
+    padding-left: 15%;
   }
 }
 
