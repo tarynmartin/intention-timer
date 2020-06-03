@@ -9,6 +9,11 @@ As a group, we had to build this application from scratch! We were provided with
   4. Construct a count down timer
   5. Display count down timer & user input
 ## Learning Goals
+At the beginning of this project, we outlined a number of learning goals to act as our "guiding star" through this project. These are as follows:
+  1. Gain a better understanding of writing clean and concise HTML & CSS
+  2. Understand how Grid and Flex-Box can enhance responsivity
+  3. Synthesize a working product from all the pieces (DOM, Data Model, JS, CSS & HTML) we've come across this module
+  4. Develop our skills working and communicating as a group
 ## Project Status
 ## Project Screenshots
 1. Our wire-framed version of the website. We found that mapping out the wire frame with high detail gave us a stronger understanding of the html framework and css styling that needed to unfold.
