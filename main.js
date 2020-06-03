@@ -1,7 +1,7 @@
 var userDescription = document.querySelector('.info-added');
 var userMin = document.querySelector('.minutes-input');
 var userSec = document.querySelector('.sec-input');
-var startBtn = document.querySelector('form');
+var startBtn = document.querySelector('.start-btn');
 var activityContainer = document.querySelector('.btn-container');
 var studyIcon = document.querySelector('.study-icon');
 var meditateIcon = document.querySelector('.meditate-icon');
@@ -11,17 +11,22 @@ var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
 var startClockBtn = document.querySelector('.start-clock-btn');
 var verifyNumber = document.querySelector('.verify-number');
+var timeDisplayTimer = document.querySelector('#time');
 
 var currentActivity;
  var currentCategory;
 
+
+
 activityContainer.addEventListener('click', changeColor);
-startBtn.addEventListener('click', startActivity);
+startBtn.addEventListener('click', checkInput);
 startClockBtn.addEventListener('click', startClock);
 userMin.addEventListener('keypress', stopEInput);
 userSec.addEventListener('keypress', stopEInput);
 userMin.addEventListener('keyup', verifyNumberInput);
 userSec.addEventListener('keyup', verifyNumberInput);
+
+
 
 function changeColor(event) { 
   if (event.target.className === 'study-btn' || event.target.className === 'study-icon') {
@@ -69,56 +74,38 @@ function activateExercise() {
   currentCategory = "exercise-btn-active";
 }
 
-// homeView.classList.add('hidden');
-// savedView.classList.remove('hidden');
-// homeButton.classList.remove('hidden');
-// clasclass
-
-
-
-
-
-
-
-// determine view states
-// choose activity view
-// current activity view
-// eventually we will need to create past activity view
-// view is changned on click by clicking start activity button
-// remove choose view
-// add current activity view
-
-
-
-// current activity
-// cirgle
-
-
 function changeView() {
   var newActivityView = document.querySelector('.new-activity');
   var currentActivityView = document.querySelector('.current-activity');
+  var timerInputDescription = document.querySelector('.user-input-description');
 
-  console.log(currentActivity);
+  retrieveFromStorage();
+
+  timerInputDescription.innerHTML = currentActivity.description;
+  timeDisplayTimer.innerHTML = `${currentActivity.minutes}:${currentActivity.seconds}`
 
   newActivityView.classList.add('hidden');
   currentActivityView.classList.remove('hidden');
-}
-
-function startActivity(event) {
-  checkInput();
 }
 
 function createActivity() {
   var currentDescription = userDescription.value;
   var currentMinutes = userMin.value;
   var currentSeconds = userSec.value;
-  var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
+  currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
+
+  var savedCurrentActivity = JSON.stringify(currentActivity);
+  localStorage.setItem("currentActivity", savedCurrentActivity);
 
   changeView();
-  //event.preventDefault();
 }
 
-function checkInput() {
+function retrieveFromStorage() {
+  var retrieveCurrentActivity = localStorage.getItem("currentActivity");
+  var parsedCurrentActivity = JSON.parse(retrieveCurrentActivity);
+}
+
+function checkInput(event) {
   var minutesError = document.querySelector('.minutes-error');
   var secondsError = document.querySelector('.seconds-error');
   var categoryError = document.querySelector('.category-error');
@@ -149,17 +136,15 @@ function stopEInput(event) {
   }
 }
 
-<<<<<<< Updated upstream
 function startClock() {
   var userInput = (currentActivity.minutes + currentActivity.seconds),
 
-  display = document.querySelector('#time');
+  display = timeDisplayTimer;
 
   currentActivity.startTimer(userInput, display);
 }
 
-=======
->>>>>>> Stashed changes
+
 // var deadline = date.Now()
 // function getUserTime(endtime) {
 //   var userMin = 2;
