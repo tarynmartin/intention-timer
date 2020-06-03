@@ -19,7 +19,7 @@ var activitiesArray = []; //this is the data model
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
-newActivityForm.addEventListener('submit', createActivity);
+newActivityForm.addEventListener('submit', checkInput);
 startClockBtn.addEventListener('click', startClock);
 userMin.addEventListener('keypress', stopEInput);
 userSec.addEventListener('keypress', stopEInput);
@@ -111,7 +111,6 @@ function changeView() {
 }
 
 function createActivity() {
-  checkInput()
   var currentDescription = userDescription.value;
   var currentMinutes = userMin.value;
   var currentSeconds = userSec.value;
@@ -130,14 +129,20 @@ function checkInput() {
   var descriptionError = document.querySelector('.description-error');
 
   if (currentCategory === undefined) {
+    event.preventDefault();
     return categoryError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A category is required";
   } else if (userDescription.value.length < 1) {
+    event.preventDefault();
     return descriptionError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">A description is required";
   }else if (userMin.value === '') {
+    event.preventDefault();
     return minutesError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Minutes are required";
   }else if (userSec.value === '') {
+    event.preventDefault();
     return secondsError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Seconds are required";
   }
+
+  createActivity();
 }
 
 function verifyNumberInput(event) {
