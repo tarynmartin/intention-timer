@@ -18,9 +18,9 @@ At the beginning of this project, we outlined a number of learning goals to act 
   + 6/3/2020, 8:55 AM- We have
 ## Project Screenshots
 1. Our wire-framed version of the website. We found that mapping out the wire frame with high detail gave us a stronger understanding of the html framework and css styling that needed to unfold.
-  + ![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.pdf)
-  + ![](assets/README_screenshots/jkw-int-timer-wireframe-iphone.pdf)
-  + ![](assets/README_screenshots/jkw-int-timer-past-activity-card.pdf)
+  + ![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.jpg)
+  + ![](assets/README_screenshots/jkw-int-timer-wireframe-iphone.jpg)
+  + ![](assets/README_screenshots/jkw-int-timer-past-activity-card.jpg)
 2. As we refined our understanding of CSS and it's relationship to HTML, our application started taking shape!
   + ![](assets/README_screenshots/jkw-button-container.gif)
   + ![](assets/README_screenshots/jkw-form-container.gif)
