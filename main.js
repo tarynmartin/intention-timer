@@ -72,31 +72,6 @@ function activateExercise() {
   currentCategory = "exercise-btn-active";
 }
 
-// homeView.classList.add('hidden');
-// savedView.classList.remove('hidden');
-// homeButton.classList.remove('hidden');
-// clasclass
-
-
-
-
-
-
-
-// determine view states
-// choose activity view
-// current activity view
-// eventually we will need to create past activity view
-// view is changned on click by clicking start activity button
-// remove choose view
-// add current activity view
-
-
-
-// current activity
-// cirgle
-
-
 function changeView() {
   var newActivityView = document.querySelector('.new-activity');
   var currentActivityView = document.querySelector('.current-activity');
@@ -146,7 +121,7 @@ function checkInput() {
 }
 
 function verifyNumberInput(event) {
-  if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
+  if (parseInt(event.target.value) < 0 || parseInt(event.target.value) >= 60) {
     event.target.value = null;
     return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
   }
@@ -159,19 +134,11 @@ function stopEInput(event) {
 }
 
 function startClock() {
-  var userInput = (currentActivity.minutes + currentActivity.seconds),
+  var userInput = (parseInt(activitiesArray[0].minutes) * 60) + parseInt(activitiesArray[0].seconds);
 
   display = document.querySelector('#time');
 
-  currentActivity.startTimer(userInput, display);
-}
+  activitiesArray[0].startTimer(userInput, display);
 
-// var deadline = date.Now()
-// function getUserTime(endtime) {
-//   var userMin = 2;
-//   var userSec = 30;
-//   return {
-//     minutes: userMin,
-//     seconds: userSec,
-//   }
-// }
+  startClockBtn.disabled = true;
+}
