@@ -131,6 +131,7 @@ button {
 
 #time {
   color: #FFF;
+  font-size: 4em;
 }
 
 .start-clock-btn {
@@ -149,6 +150,10 @@ button {
   border-radius: 100%;
   overflow: none;
   text-align: center;
+}
+
+.user-input-description {
+  font-size: 1.25em;
 }
 
 /* ~~~~~~~~~~~~~~ PAST ACTIVITY VIEW ~~~~~~~~~~~~~~~~ */
