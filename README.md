@@ -4,6 +4,9 @@
 ## Project Status
 ## Project Screenshots
 1. Our wire-framed version of the website. We found that mapping out the wire frame with high detail gave us a stronger understanding of the html framework and css styling that needed to unfold.
+  + ![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.pdf)
+  + ![](assets/README_screenshots/jkw-int-timer-wireframe-iphone.pdf)
+  + ![](assets/README_screenshots/jkw-int-timer-past-activity-card.pdf)
 2. ![](assets/README_screenshots/jkw-button-container.gif)
 3. ![](assets/README_screenshots/jkw-center-activity-btns.gif)
 4. ![](assets/README_screenshots/jkw-current-activity-section.gif)
