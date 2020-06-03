@@ -105,16 +105,14 @@ function changeView() {
   currentActivityView.classList.remove('hidden');
 }
 
-function startActivity(event) {
-  checkInput();
-}
-
 function createActivity() {
+  checkInput()
   var currentDescription = userDescription.value;
   var currentMinutes = userMin.value;
   var currentSeconds = userSec.value;
   var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
-  activitiesArray.push(currentActivity)
+
+  activitiesArray.push(currentActivity);
 
   changeView()
   event.preventDefault();
@@ -135,7 +133,6 @@ function checkInput() {
   }else if (userSec.value === '') {
     return secondsError.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Seconds are required";
   }
-  createActivity();
 }
 
 function verifyNumberInput(event) {
