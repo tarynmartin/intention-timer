@@ -11,12 +11,15 @@ var meditateBtn = document.querySelector('.meditate-btn');
 var exerciseBtn = document.querySelector('.exercise-btn');
 var startClockBtn = document.querySelector('.start-clock-btn');
 var verifyNumber = document.querySelector('.verify-number');
+var timerDisplay = document.querySelector("#time");
+var newActivityForm = document.querySelector('.form-input');
 
 var currentActivity;
+var activitiesArray = []; //this is the data model
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
-startBtn.addEventListener('click', startActivity);
+newActivityForm.addEventListener('submit', createActivity);
 startClockBtn.addEventListener('click', startClock);
 userMin.addEventListener('keypress', stopEInput);
 userSec.addEventListener('keypress', stopEInput);
@@ -111,8 +114,10 @@ function createActivity() {
   var currentMinutes = userMin.value;
   var currentSeconds = userSec.value;
   var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
+  activitiesArray.push(currentActivity)
 
-  changeView();
+  changeView()
+  event.preventDefault();
 }
 
 function checkInput() {
