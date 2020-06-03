@@ -1,7 +1,7 @@
 var userDescription = document.querySelector('.info-added');
 var userMin = document.querySelector('.minutes-input');
 var userSec = document.querySelector('.sec-input');
-var startBtn = document.querySelector('.start-btn');
+var startBtn = document.querySelector('form');
 var activityContainer = document.querySelector('.btn-container');
 var studyIcon = document.querySelector('.study-icon');
 var meditateIcon = document.querySelector('.meditate-icon');
@@ -98,6 +98,8 @@ function changeView() {
   var newActivityView = document.querySelector('.new-activity');
   var currentActivityView = document.querySelector('.current-activity');
 
+  console.log(currentActivity);
+
   newActivityView.classList.add('hidden');
   currentActivityView.classList.remove('hidden');
 }
@@ -113,6 +115,7 @@ function createActivity() {
   var currentActivity = new Activity(currentCategory, currentDescription, currentMinutes, currentSeconds);
 
   changeView();
+  //event.preventDefault();
 }
 
 function checkInput() {
@@ -146,6 +149,7 @@ function stopEInput(event) {
   }
 }
 
+<<<<<<< Updated upstream
 function startClock() {
   var userInput = (currentActivity.minutes + currentActivity.seconds),
 
@@ -154,6 +158,8 @@ function startClock() {
   currentActivity.startTimer(userInput, display);
 }
 
+=======
+>>>>>>> Stashed changes
 // var deadline = date.Now()
 // function getUserTime(endtime) {
 //   var userMin = 2;
