@@ -15,7 +15,7 @@ var timerDisplay = document.querySelector("#time");
 var newActivityForm = document.querySelector('.form-input');
 
 var currentActivity;
-var activitiesArray = []; //this is the data model
+var activitiesArray = [];
  var currentCategory;
 
 activityContainer.addEventListener('click', changeColor);
@@ -70,32 +70,6 @@ function activateExercise() {
   startClockBtn.style.borderColor = '#FD8078';
 
   currentCategory = "exercise-btn-active";
-}
-
-// homeView.classList.add('hidden');
-// savedView.classList.remove('hidden');
-// homeButton.classList.remove('hidden');
-// clasclass
-
-
-
-
-
-
-
-// determine view states
-// choose activity view
-// current activity view
-// eventually we will need to create past activity view
-// view is changned on click by clicking start activity button
-// remove choose view
-// add current activity view
-
-
-
-// current activity
-// cirgle
-
 
 function changeView() {
   var newActivityView = document.querySelector('.new-activity');
@@ -159,19 +133,9 @@ function stopEInput(event) {
 }
 
 function startClock() {
-  var userInput = (currentActivity.minutes + currentActivity.seconds),
+  var userInput = (activitiesArray[0].minutes + activitiesArray[0].seconds),
 
   display = document.querySelector('#time');
 
   currentActivity.startTimer(userInput, display);
 }
-
-// var deadline = date.Now()
-// function getUserTime(endtime) {
-//   var userMin = 2;
-//   var userSec = 30;
-//   return {
-//     minutes: userMin,
-//     seconds: userSec,
-//   }
-// }
