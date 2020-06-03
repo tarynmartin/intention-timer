@@ -26,22 +26,24 @@
             <form class="form-input">
               <div class="top-input">
                 <label>What would you like to accomplish during this time?</label>
-                <input type="text" class="info-added">
+                <input type="text" class="info-added" pattern="A-Za-z">
                 <p class="description-error"></p>
               </div>
               <div class="left-input">
                 <label>Minutes</label>
-                <input type="number" class="minutes-input">
+                <input type="number" class="minutes-input" min="0" max="60">
                 <p class="minutes-error"></p>
               </div>
               <div class="right-input">
                 <label>Seconds</label>
-                <input type="number" class="sec-input">
+                <input type="number" class="sec-input" min="0" max="60">
                 <p class="seconds-error"></p>
               </div>
               <p class="verify-number"></p>
-              <button class="start-btn">START ACTIVITY</button>
             </form>
+            <div class="btn-start">
+              <button class="start-btn">START ACTIVITY</button>
+            </div>
           </div>
         </article>
         <article class="current-activity hidden">
@@ -49,7 +51,7 @@
           <div class="timer-background">
             <div class="countdown-clock">
               <span></span>
-              <p class="user-input-description"></p>
+              <p class="user-input-description">Do some yoga</p>
               <span id="time"></span>
             </div>
             <button class="start-clock-btn">START</button>
