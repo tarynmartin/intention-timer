@@ -29,9 +29,12 @@ At the beginning of this project, we outlined a number of learning goals to act 
 ![](assets/README_screenshots/jkw-activity-categories.gif)
 4. Users can fill in the New Activity Form and hit Start Activity. Once the Start Activity button is clicked, a new object is created. Information from this object is carried into the Current Activity View, which displays a countdown clock.
 ![](assets/README_screenshots/jkw-user-input.gif)
-5. When the user hits START, the clock begins ticking down to 0. The button is deactivated after being clicked to prevent double-clicks.
+5. If a user tries to click Start Activity before all form fields are filled in, they receive a form-specific error message. The new activity object won't be created until all form fields are complete.
+![](assets/README_screenshots/jkw-error-1.gif)
+![](assets/README_screenshots/jkw-error-2.gif)
+6. When the user hits START, the clock begins ticking down to 0. The button is deactivated after being clicked to prevent double-clicks.
 ![](assets/README_screenshots/jkw-start-clock-button.gif)
-6. When the clock hits 0, the user receives a congratulatory alert message!
+7. When the clock hits 0, the user receives a congratulatory alert message!
 ![](assets/README_screenshots/jkw-countdown-alert.gif)
 ## Next Steps
   + Finish Iteration 3 
