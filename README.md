@@ -18,15 +18,21 @@ At the beginning of this project, we outlined a number of learning goals to act 
   + 6/3/2020, 6:00 PM- We have just finished our first try at finishing iteration 3. There are several more things that need to be addressed before it is finalized. Look at next steps to see what needs to occur.
 ## Project Screenshots
 1. Our wire-framed version of the website. We found that mapping out the wire frame with high detail gave us a stronger understanding of the html framework and css styling that needed to unfold.
-  + ![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.jpg)
-  + ![](assets/README_screenshots/jkw-int-timer-wireframe-iphone.jpg)
-  + ![](assets/README_screenshots/jkw-int-timer-past-activity-card.jpg)
-2. As we refined our understanding of CSS and it's relationship to HTML, our application started taking shape!
-  + ![](assets/README_screenshots/jkw-button-container.gif)
-  + ![](assets/README_screenshots/jkw-form-container.gif)
-  + ![](assets/README_screenshots/jkw-center-activity-btns.gif)
-3. This is the current activity view:
-  + 
+![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.jpg)
+![](assets/README_screenshots/jkw-int-timer-wireframe-iphone.jpg)
+![](assets/README_screenshots/jkw-int-timer-past-activity-card.jpg)
+2. As we refined our understanding of CSS and it's relationship to HTML, our application started taking shape! We opted to focus on responsivity from the beginning so that our future development fit the screen in ways we expected.
+![](assets/README_screenshots/jkw-button-container.gif)
+![](assets/README_screenshots/jkw-form-container.gif)
+![](assets/README_screenshots/jkw-center-activity-btns.gif)
+3. This is the current activity view. Here, users can choose from one of three activity categories to choose from. Each is associated with it's own unique background and icon color.
+![](assets/README_screenshots/jkw-activity-categories.gif)
+4. Users can fill in the New Activity Form and hit Start Activity. Once the Start Activity button is clicked, a new object is created. Information from this object is carried into the Current Activity View, which displays a countdown clock.
+![](assets/README_screenshots/jkw-user-input.gif)
+5. When the user hits START, the clock begins ticking down to 0. The button is deactivated after being clicked to prevent double-clicks.
+![](assets/README_screenshots/jkw-start-clock-button.gif)
+6. When the clock hits 0, the user receives a congratulatory alert message!
+![](assets/README_screenshots/jkw-countdown-alert.gif)
 ## Next Steps
   + Finish Iteration 3 
     - add 0 before seconds and minutes if the user input is low
