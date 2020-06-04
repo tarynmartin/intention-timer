@@ -26,7 +26,7 @@ At the beginning of this project, we outlined a number of learning goals to act 
   + ![](assets/README_screenshots/jkw-form-container.gif)
   + ![](assets/README_screenshots/jkw-center-activity-btns.gif)
 3. This is the current activity view:
-  + ![](assets/README_screenshots/jkw-current-activity-section.gif)
+  + 
 ## Next Steps
   + Finish Iteration 3 
     - add 0 before seconds and minutes if the user input is low
