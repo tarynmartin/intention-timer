@@ -15,7 +15,7 @@ At the beginning of this project, we outlined a number of learning goals to act 
   3. Synthesize a working product from all the pieces (DOM, Data Model, JS, CSS & HTML) we've come across this module
   4. Develop our skills working and communicating as a group
 ## Project Status
-  + 6/3/2020, 8:55 AM- We have
+  + 6/3/2020, 6:00 PM- We have just finished our first try at finishing iteration 3. There are several more things that need to be addressed before it is finalized. Look at next steps to see what needs to occur.
 ## Project Screenshots
 1. Our wire-framed version of the website. We found that mapping out the wire frame with high detail gave us a stronger understanding of the html framework and css styling that needed to unfold.
   + ![](assets/README_screenshots/jkw-int-timer-wireframe-desktop.jpg)
@@ -28,8 +28,12 @@ At the beginning of this project, we outlined a number of learning goals to act 
 3. This is the current activity view:
   + ![](assets/README_screenshots/jkw-current-activity-section.gif)
 ## Next Steps
-  + Refactor, refactor, refactor!
-  + Finish Iteration 3
+  + Finish Iteration 3 
+    - add 0 before seconds and minutes if the user input is low
+    - Fix movement of start button during countdown
+    - Cleaning up the timer display to look cleaner
+  + Refactor code
+  + Move onto iteration 4
 ## Reflection
 Taryn - This project was really tough for me. There were some new concepts to learn how to use, and we were building a site from nothing! I definitely learned more about how to build a site from scratch, and how all of the little bits fit together. This was an amazing learning experience in seeing how HTML and CSS connect with JavaScript and how aspects need to be adjusted throughout the process to make sure everything works smoothly. I also learned a lot about working together, especially working remotely. I feel it was definitely harder to work remotely, because it is more time consuming to explain things to others. There isn't a screen handy for a person to point to, and sharing screens isn't the same as watching a person interact with the computer in person. I want to take what I have learned and refine and improve my skills and processes for projects in the future.
 ## Links
