@@ -70,6 +70,7 @@ function activateExercise() {
   startClockBtn.style.borderColor = '#FD8078';
 
   currentCategory = "exercise-btn-active";
+}
 
 function changeView() {
   var newActivityView = document.querySelector('.new-activity');
@@ -120,7 +121,7 @@ function checkInput() {
 }
 
 function verifyNumberInput(event) {
-  if (parseInt(event.target.value) <= 0 || parseInt(event.target.value) >= 60) {
+  if (parseInt(event.target.value) < 0 || parseInt(event.target.value) >= 60) {
     event.target.value = null;
     return verifyNumber.innerHTML = "<img class=\"warning-icon\" src=\"assets/warning.svg\">Choose number between 0 and 60";
   }
@@ -133,9 +134,11 @@ function stopEInput(event) {
 }
 
 function startClock() {
-  var userInput = (activitiesArray[0].minutes + activitiesArray[0].seconds),
+  var userInput = (parseInt(activitiesArray[0].minutes) * 60) + parseInt(activitiesArray[0].seconds);
 
   display = document.querySelector('#time');
 
-  currentActivity.startTimer(userInput, display);
+  activitiesArray[0].startTimer(userInput, display);
+
+  startClockBtn.disabled = true;
 }
