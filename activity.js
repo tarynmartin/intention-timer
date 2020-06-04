@@ -11,8 +11,8 @@ class Activity {
   startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     var x = setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+        minutes = parseInt(timer / 60);
+        seconds = parseInt(timer % 60);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
